@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(./images/Fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  background-color: #121214;
+
+  font-size: 1.6rem;
+  color: white;
+}
+
+body * {
+  line-height: 160%;
+}
+
+header div {
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin: 3.2rem auto;
+
+  transition: transform 0.6s;
+
+  animation: topBottom 0.7s;
+}
+
+header div:hover {
+  transform: scale(1.2);
+}
+
+header div img {
+  padding: 0.4rem;
+  width: 100%;
+  border-radius: 50%;
+}
+main {
+  max-width: 58rem;
+  width: 90%;
+  display: grid;
+  gap: 2.4rem;
+
+  margin: 3.2rem auto;
+}
+
+main section {
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+
+  padding-top: 0.4rem;
+
+  border-radius: 1rem;
+  animation: topSection 0.7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+section div {
+  background-color: #2a2634;
+  padding: 3.2rem;
+  padding-top: 2.4rem;
+  border-radius: 0.8rem;
+}
+
+section h2 {
+  font-family: "inter", sans-serif;
+  line-height: 3.8rem;
+  letter-spacing: -0.47px;
+}
+section p {
+  font-family: "inter", sans-serif;
+  line-height: 2.5rem;
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+}
+
+ul {
+  margin-top: 2.4rem;
+  list-style: none;
+}
+
+ul li {
+  animation: leftMargin 0.7s backwards;
+
+  transition: transform 0.5s;
+}
+
+ul li:hover {
+  transform: scale(1.2);
+}
+
+.games-list li {
+  animation-delay: 0.2s;
+}
+
+.streamers-list li {
+  animation-delay: 0.5s;
+}
+
+.socials-list li {
+  animation-delay: 0.7s;
+}
+
+section ul {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.games-list img {
+  width: 9rem;
+  border-radius: 0.8rem;
+}
+.streamers-list img {
+  border-radius: 50%;
+  width: 7rem;
+  border: 1px solid #443e54;
+}
+
+/*Animações*/
+@keyframes topBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftMargin {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
